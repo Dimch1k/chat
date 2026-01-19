@@ -19,6 +19,14 @@ target/
 *.iml
 *.ipr
 
+# ollama local runtimes
+ollama/
+
+# postgres data
+postgres/
+postgres/data/
+postgres/scripts/
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/

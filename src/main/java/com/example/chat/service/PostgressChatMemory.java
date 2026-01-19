@@ -7,7 +7,6 @@ import lombok.Builder;
 import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.chat.messages.Message;
 
-import java.util.Comparator;
 import java.util.List;
 
 @Builder
@@ -32,7 +31,6 @@ public class PostgressChatMemory implements ChatMemory {
         return chat.getHistory().stream()
                 .skip(messagesToSkip)
                 .map(ChatEntry::toMessage)
-                .limit(maxMessages)
                 .toList();
     }
 
