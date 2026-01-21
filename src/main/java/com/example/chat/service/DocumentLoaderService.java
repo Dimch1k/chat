@@ -33,7 +33,7 @@ public class DocumentLoaderService implements CommandLineRunner {
 
     @SneakyThrows
     public void loadDocuments() {
-        List<Resource> resources = Arrays.stream(resourcePatternResolver.getResources("classpath:/knowlagebase/**/*.txt")).toList();
+        List<Resource> resources = Arrays.stream(resourcePatternResolver.getResources("classpath:/knowledgebase/**/*.txt")).toList();
 
         resources.stream()
                 .map(resource -> Pair.of(resource, calculateHash(resource)))
